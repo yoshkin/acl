@@ -1,0 +1,53 @@
+{
+    "name": "AYashenkov/acl",
+    "description": "Simple acl package",
+    "keywords": [
+        "AYashenkov",
+        "simple-acl"
+    ],
+    "homepage": "https://github.com/yoshkin/acl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aleksey Yashenkov",
+            "email": "alexey.yashenkov@gmail.com",
+            "homepage": "http://yashenkov.ru",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "larapack/dd": "^1.0",
+        "phpunit/phpunit": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "AYashenkov\\Acl\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AYashenkov\\Acl\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AYashenkov\\Acl\\AclServiceProvider"
+            ],
+            "aliases": {
+                "Acl": "AYashenkov\\Acl\\AclFacade"
+            }
+        }
+    }
+}
